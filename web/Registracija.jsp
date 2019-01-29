@@ -26,6 +26,7 @@
         </div>
         </div>
         
+        
         <form action="RegistracijaServlet" method="post">
             <div class="container">
                 <h1>Registracija</h1>
