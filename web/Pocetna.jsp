@@ -38,12 +38,13 @@
         %>
         
         <div class="reglog">
+            <a href="LogoutServlet">Izloguj se</a>
             <a href="Profil.jsp"><%=user%></a>
+            
         </div>
         <%
           }
         %>
-        </div>
         
         <h1>Dobrodosli u Business hotel</h1>
         

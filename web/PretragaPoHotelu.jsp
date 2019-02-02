@@ -13,6 +13,38 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <div class="header">
+        <img src="Slike/Logohotel.png" alt="Logo"/>
+        </div>
+        <div class="topnav">
+        <a href="Pocetna.jsp">Pocetna</a>
+        <a href="Usluge.jsp">Usluge</a>
+        <a href="#">Kontakt</a>
+        <% 
+            HttpSession sesija=request.getSession();
+            
+            String user=(String)sesija.getAttribute("user");
+            if(user==null)
+            {
+        %>
+                <div class="reglog">
+                <a href="Login.jsp">Uloguj se</a>
+                </div>
+        <%        
+            }
+            else
+            {
+        %>
+        
+        <div class="reglog">
+            <a href="LogoutServlet">Izloguj se</a>
+            <a href="Profil.jsp"><%=user%></a>
+            
+        </div>
+        <%
+          }
+        %>
+        
         <h2>Pretraga po hotelu</h2>
         <form action="PretragaPoHotelu.jsp" method="post"> 
         <p>Izaberi hotel:</p>

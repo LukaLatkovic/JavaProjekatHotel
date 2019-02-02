@@ -19,14 +19,31 @@
         <div class="topnav">
         <a href="Pocetna.jsp">Pocetna</a>
         <a href="Usluge.jsp">Usluge</a>
-        <a href="#">Link</a>
-        <div class="reglog">
+        <a href="#">Kontakt</a>
+        <% 
+            HttpSession sesija=request.getSession();
             
-            
-            <a href="Login.jsp">Uloguj se</a>
-        </div>
-        </div>
+            String user=(String)sesija.getAttribute("user");
+            if(user==null)
+            {
+        %>
+                <div class="reglog">
+                <a href="Login.jsp">Uloguj se</a>
+                </div>
+        <%        
+            }
+            else
+            {
+        %>
         
+        <div class="reglog">
+            <a href="LogoutServlet">Izloguj se</a>
+            <a href="Profil.jsp"><%=user%></a>
+            
+        </div>
+        <%
+          }
+        %>
         
         <form action="RegistracijaServlet" method="post">
             <div class="container">
