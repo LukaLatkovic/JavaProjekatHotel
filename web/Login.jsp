@@ -17,7 +17,7 @@
         <img src="Slike/Logohotel.png" alt="Logo"/>
         </div>
         <div class="topnav">
-        <a href="#">Link</a>
+        <a href="Pocetna.jsp">Pocetna</a>
         <a href="#">Link</a>
         <a href="#">Link</a>
         <div class="reglog">
@@ -47,7 +47,9 @@
                 String msg=(String)request.getAttribute("msg");
                 if(msg!=null&& msg.length()>0){
             %>
-                    <%=msg%>
+                    <div class="error">
+                <p><%=msg%></p>
+                </div>
             <%        
                 }
             %>

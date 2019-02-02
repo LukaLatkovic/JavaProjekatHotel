@@ -4,6 +4,7 @@
     Author     : User
 --%>
 
+<%@page import="Beanovi.Korisnik"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,13 +18,31 @@
         <img src="Slike/Logohotel.png" alt="Logo"/>
         </div>
         <div class="topnav">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <div class="reglog">
+        <a href="Pocetna.jsp">Pocetna</a>
+        <a href="Usluge.jsp">Usluge</a>
+        <a href="#">Kontakt</a>
+        <% 
+            HttpSession sesija=request.getSession();
             
-            <a href="Login.jsp">Uloguj se</a>
+            String user=(String)sesija.getAttribute("user");
+            if(user==null)
+            {
+        %>
+                <div class="reglog">
+                <a href="Login.jsp">Uloguj se</a>
+                </div>
+        <%        
+            }
+            else
+            {
+        %>
+        
+        <div class="reglog">
+            <a href="Profil.jsp"><%=user%></a>
         </div>
+        <%
+          }
+        %>
         </div>
         
         <h1>Dobrodosli u Business hotel</h1>
