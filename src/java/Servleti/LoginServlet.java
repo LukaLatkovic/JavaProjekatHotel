@@ -77,6 +77,7 @@ public class LoginServlet extends HttpServlet {
                         korisnik.setPoeni(poeni);
                         sesija.setAttribute("korisnik",korisnik);
                         sesija.setAttribute("user", user);
+                        sesija.setAttribute("role", role);
                         response.sendRedirect("Pocetna.jsp");
                         stmt.close();
                         con.close();
