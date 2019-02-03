@@ -45,6 +45,7 @@
         <%
           }
         %>
+        </div>
         
         <h1>Dobrodosli u Business hotel</h1>
         

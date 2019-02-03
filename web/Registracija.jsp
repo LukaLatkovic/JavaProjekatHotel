@@ -44,6 +44,7 @@
         <%
           }
         %>
+        </div>
         
         <form action="RegistracijaServlet" method="post">
             <div class="container">
