@@ -83,7 +83,7 @@ public class RegistracijaServlet extends HttpServlet {
                    Statement st=con.createStatement(); 
                    
                    String upitinsert="INSERT INTO user VALUES"
-                           + "('5','"+user+"','"+password+"','"+mejl+"','korisnik','')";
+                           + "('5','"+user+"','"+password+"','"+mejl+"','korisnik','0')";
                    
                    st.executeUpdate(upitinsert);
                    st.close();
