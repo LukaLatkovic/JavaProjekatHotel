@@ -61,6 +61,7 @@ public class RegistracijaServlet extends HttpServlet {
            }
            st.close();
            con.close();
+           
         }
         catch(ClassNotFoundException e){}
         catch(SQLException se)
