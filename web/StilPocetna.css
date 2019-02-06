@@ -127,3 +127,8 @@ img {vertical-align: middle;}
   text-decoration: none;
 }
 body {font-family: Arial, Helvetica, sans-serif;}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 100px;
+}

@@ -28,7 +28,8 @@
             {
         %>
                 <div class="reglog">
-                <a href="Login.jsp">Uloguj se</a>
+                 <a href="Login.jsp">Uloguj se</a>
+                 <a href="Registracija.jsp">Registruj se</a>
                 </div>
         <%        
             }

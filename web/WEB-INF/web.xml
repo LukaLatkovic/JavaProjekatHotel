@@ -12,6 +12,14 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>Servleti.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UnosHotel</servlet-name>
+        <servlet-class>Servleti.UnosHotel</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BrisanjeHotela</servlet-name>
+        <servlet-class>Servleti.BrisanjeHotela</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistracijaServlet</servlet-name>
         <url-pattern>/RegistracijaServlet</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UnosHotel</servlet-name>
+        <url-pattern>/UnosHotel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrisanjeHotela</servlet-name>
+        <url-pattern>/BrisanjeHotela</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

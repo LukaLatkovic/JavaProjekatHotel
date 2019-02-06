@@ -30,6 +30,7 @@
         %>
                 <div class="reglog">
                 <a href="Login.jsp">Uloguj se</a>
+                <a href="Registracija.jsp">Registruj se</a>
                 </div>
         <%        
             }
@@ -49,6 +50,9 @@
         
         <h1>Dobrodosli u Business hotel</h1>
         
+        <hr>
+        <br>
+        <p>Stranica koja vam pomaze pri rezervaciji hotelskog smestaja u Beogradu</p>
         <div class="slideshow-container">
 
 <div class="mySlides fade">

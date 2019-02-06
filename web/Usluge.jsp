@@ -29,6 +29,7 @@
         %>
                 <div class="reglog">
                 <a href="Login.jsp">Uloguj se</a>
+                <a href="Registracija.jsp">Registruj se</a>
                 </div>
         <%        
             }
@@ -56,6 +57,22 @@
         <h1 align="center">Usluge hotela</h1>
         <hr>
     <center>
+        <form action="UnosNovogHotela.jsp" name="unoshotel" class="formazausluge" method="post"><br>
+            <label><b>Unos novog hotela</b></label><br/>
+            <center><input type="submit" name="dugmenovhotel" class="dugmezapretragu" value="Kreni"></center>
+        </form>
+        <div class="vl"></div>
+        <form action="IzmenaHotela.jsp" name="izmenahotela" class="formazausluge" method="post"><br>
+            <label><b>Izmena postojeceg hotela</b></label><br/>
+            <center><input type="submit" name="dugmeizmenihotel" class="dugmezapretragu" value="Kreni"></center>
+        </form>
+        <div class="vl"></div>
+        <form action="IzmenaHotela.jsp" name="brisanjehotela" class="formazausluge" method="post"><br>
+            <label><b>Brisanje postojeceg hotela</b></label><br/>
+            <center><input type="submit" name="dugmebrisihotel" class="dugmezapretragu" value="Kreni"></center>
+        </form>
+    </center><br/>
+    <center>
         <form name="prethotel" class="formazausluge" method="post"><br>
             <label><b>Pretraga po hotelu</b></label><br/>
             <center><input type="submit" name="dugmehotel" class="dugmezapretragu" value="Kreni"></center>
@@ -65,12 +82,8 @@
             <label><b>Pretraga po tipu sobe</b></label><br/>
             <center><input type="submit" name="dugmetipsobe" class="dugmezapretragu" value="Kreni"></center>
         </form>
-        <div class="vl"></div>
-        <form name="unoshotel" class="formazausluge" method="post"><br>
-            <label><b>Unos novog hotela</b></label><br/>
-            <center><input type="submit" name="dugmenovhotel" class="dugmezapretragu" value="Kreni"></center>
-        </form>
-        <div class="vl"></div>
+        
+        
     </center>
         
         <%
@@ -89,12 +102,16 @@
         
         <%
             }
-            else
+            else if(role.equals("korisnik")) 
             {
         %>
 
         
         <%
+            }
+            else if(user==null)
+            {
+                response.sendRedirect("Registracija.jsp");
             }
         %>
         

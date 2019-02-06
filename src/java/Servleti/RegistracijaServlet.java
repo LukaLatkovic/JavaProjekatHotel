@@ -83,8 +83,8 @@ public class RegistracijaServlet extends HttpServlet {
                    Connection con=DriverManager.getConnection(dbUrl,userb,pass);
                    Statement st=con.createStatement(); 
                    
-                   String upitinsert="INSERT INTO user VALUES"
-                           + "('5','"+user+"','"+password+"','"+mejl+"','korisnik','0')";
+                   String upitinsert="INSERT INTO user(username,password,email,role,poeni) VALUES"
+                           + "('"+user+"','"+password+"','"+mejl+"','korisnik','0')";
                    
                    st.executeUpdate(upitinsert);
                    st.close();
