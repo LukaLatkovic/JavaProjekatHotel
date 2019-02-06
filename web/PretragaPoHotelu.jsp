@@ -108,7 +108,8 @@
                 }
                 catch(Exception ex)
                 {
-                    ex.printStackTrace();
+                    request.setAttribute("poruka", ex);
+                    request.getRequestDispatcher("error.jsp").forward(request, response);
                 }
                 %>
         </table>

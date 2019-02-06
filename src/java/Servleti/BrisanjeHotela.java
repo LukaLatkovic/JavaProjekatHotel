@@ -52,7 +52,7 @@ request.getRequestDispatcher("IzmenaHotela.jsp").forward(request, response);
 catch(Exception e)
 {
        eror=e.getMessage();
-       request.setAttribute("errormsg",eror);
+       request.setAttribute("poruka",eror);
        request.getRequestDispatcher("error.jsp").forward(request, response);
 }
 

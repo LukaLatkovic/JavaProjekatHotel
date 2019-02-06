@@ -106,7 +106,7 @@ public class LoginServlet extends HttpServlet {
                                 {
                                     errormsg+=ex.getMessage();
                                 }
-                                request.setAttribute("errormsg",errormsg);
+                                request.setAttribute("poruka",errormsg);
                                 request.getRequestDispatcher("error.jsp").forward(request, response);
                             }
                         }

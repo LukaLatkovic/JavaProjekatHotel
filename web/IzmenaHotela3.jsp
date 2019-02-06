@@ -94,8 +94,10 @@ else
 }
 catch(SQLException sql)
 {
-request.setAttribute("error", sql);
-out.println(sql);
+request.setAttribute("poruka", sql);
+request.getRequestDispatcher("error.jsp").forward(request, response);
+
+
 }
 }
 %>
