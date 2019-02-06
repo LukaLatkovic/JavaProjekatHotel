@@ -73,6 +73,11 @@
         </form>
     </center><br/>
     <center>
+        <form action="ListaHotelaServlet?ispis=listahotel" name="listhotel" class="formazausluge" method="post"><br>
+            <label><b>Lista hotela</b></label><br/>
+            <center><input type="submit" name="dugmelisthotel" class="dugmezapretragu" value="Kreni"></center>
+        </form>
+        <div class="vl"></div>
         <form name="prethotel" class="formazausluge" method="post"><br>
             <label><b>Pretraga po hotelu</b></label><br/>
             <center><input type="submit" name="dugmehotel" class="dugmezapretragu" value="Kreni"></center>

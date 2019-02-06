@@ -20,6 +20,14 @@
         <servlet-name>BrisanjeHotela</servlet-name>
         <servlet-class>Servleti.BrisanjeHotela</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListaHotelaServlet</servlet-name>
+        <servlet-class>Servleti.ListaHotelaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListaTipova</servlet-name>
+        <servlet-class>Servleti.ListaTipova</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistracijaServlet</servlet-name>
         <url-pattern>/RegistracijaServlet</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>BrisanjeHotela</servlet-name>
         <url-pattern>/BrisanjeHotela</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaHotelaServlet</servlet-name>
+        <url-pattern>/ListaHotelaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListaTipova</servlet-name>
+        <url-pattern>/ListaTipova</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
