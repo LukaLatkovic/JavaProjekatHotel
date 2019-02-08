@@ -53,7 +53,7 @@
             
             Korisnik korisnik=(Korisnik)sesija.getAttribute("korisnik");
             
-            
+            String korisnikid=korisnik.getKorisnikID();
             String korisnikuser=korisnik.getUsername();
             String korisnikmejl=korisnik.getEmail();
             String korisnikpoeni=korisnik.getPoeni();
@@ -110,16 +110,16 @@
         try{
         connection = DriverManager.getConnection(connectionUrl+database, userid, password);
         statement=connection.createStatement();
-        String sql ="select h.naziv,ts.kreveti,ts.cena,i.datum_iznajmljeno,i.status from hoteli as h join tipsobe as ts on h.id=ts.hotel_id join iznajmljeno as i on ts.id=i.soba_id join user as u on h.menadzer_id=u.id and u.id=i.korisnik_id where u.username='"+korisnikuser+"'";
+        String sql ="select h.naziv,ts.kreveti,ts.cena,i.datum_iznajmljeno,i.status from hoteli as h join tipsobe as ts on h.id=ts.hotel_id join iznajmljeno as i on ts.id=i.soba_id join user as u on h.menadzer_id=u.id where u.username='"+korisnikuser+"'";
         resultSet = statement.executeQuery(sql);
         while(resultSet.next()){
 %>
 <tr>
-    <td align="right"><%=resultSet.getString("naziv") %></td>
-    <td><%=resultSet.getString("kreveti") %></td>
-    <td><%=resultSet.getString("cena") %></td>
-    <td align="right"><%=resultSet.getString("datum_iznajmljeno") %></td>
-    <td><%=resultSet.getString("status") %></td>
+    <td align="right"><%=resultSet.getString("h.naziv") %></td>
+    <td><%=resultSet.getString("ts.kreveti") %></td>
+    <td><%=resultSet.getString("ts.cena") %></td>
+    <td align="right"><%=resultSet.getString("i.datum_iznajmljeno") %></td>
+    <td><%=resultSet.getString("i.status") %></td>
 </tr>
 <%
     }

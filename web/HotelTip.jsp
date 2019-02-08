@@ -83,7 +83,7 @@
                 </tr>
                 <% 
                     ArrayList<TipSobe> hoteltip=(ArrayList<TipSobe>)request.getAttribute("hoteltip");
-                    
+                   
                     for(TipSobe pom : hoteltip){
                 %>
                     <tr>
@@ -92,7 +92,7 @@
                         <td><%=pom.getBrojSlobodnih() %></td>
                         <td><%=pom.getOpis() %></td>
                         <td><%=pom.getCena() %></td>
-                        <td><input type="button" class="dugmezapretragu" onclick="window.location.href='#'" value="Rezervisi"></td>
+                        <td><input type="button" class="dugmezapretragu" onclick="window.location.href='ServletRezervacija?id=<%=pom.getTipSobeID()%>'" value="Rezervisi"></td>
                     </tr>
                     <%
                 }

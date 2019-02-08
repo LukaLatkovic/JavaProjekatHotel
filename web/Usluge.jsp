@@ -63,13 +63,18 @@
         </form>
         <div class="vl"></div>
         <form action="IzmenaHotela.jsp" name="izmenahotela" class="formazausluge" method="post"><br>
-            <label><b>Izmena postojeceg hotela</b></label><br/>
+            <label><b>Izmena i brisanje postojeceg hotela</b></label><br/>
             <center><input type="submit" name="dugmeizmenihotel" class="dugmezapretragu" value="Kreni"></center>
         </form>
-        <div class="vl"></div>
+      <%--  <div class="vl"></div>
         <form action="IzmenaHotela.jsp" name="brisanjehotela" class="formazausluge" method="post"><br>
             <label><b>Brisanje postojeceg hotela</b></label><br/>
             <center><input type="submit" name="dugmebrisihotel" class="dugmezapretragu" value="Kreni"></center>
+        </form> --%>
+       <div class="vl"></div>
+        <form action="IzmenaKorisnika.jsp" name="izmenakorisnika" class="formazausluge" method="post"><br>
+            <label><b>Izmena i brisanje korisnika</b></label><br/>
+            <center><input type="submit" name="dugmeizmenikorisnika" class="dugmezapretragu" value="Kreni"></center>
         </form>
     </center><br/>
     <center>
@@ -78,17 +83,15 @@
             <center><input type="submit" name="dugmelisthotel" class="dugmezapretragu" value="Kreni"></center>
         </form>
         <div class="vl"></div>
-        <form name="prethotel" class="formazausluge" method="post"><br>
+        <form action="PretragaPoHotelu.jsp" name="prethotel" class="formazausluge" method="post"><br>
             <label><b>Pretraga po hotelu</b></label><br/>
             <center><input type="submit" name="dugmehotel" class="dugmezapretragu" value="Kreni"></center>
         </form>
         <div class="vl"></div>
-        <form name="pretsoba" class="formazausluge" method="post"><br>
+        <form action="PretragaPoTipu.jsp" name="pretsoba" class="formazausluge" method="post"><br>
             <label><b>Pretraga po tipu sobe</b></label><br/>
             <center><input type="submit" name="dugmetipsobe" class="dugmezapretragu" value="Kreni"></center>
-        </form>
-        
-        
+        </form>     
     </center>
         
         <%

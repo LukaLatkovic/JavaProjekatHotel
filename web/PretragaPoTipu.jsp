@@ -1,7 +1,7 @@
 <%-- 
-    Document   : PretragaPoHotelu
-    Created on : Jan 30, 2019, 8:47:29 PM
-    Author     : Luka Latkovic
+    Document   : PretragaPoTipu
+    Created on : Feb 7, 2019, 10:39:08 PM
+    Author     : Luka Latkovic 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -68,14 +68,14 @@
         
         
         <center>
-            <h2>Pretraga po hotelu</h2>
+            <h2>Pretraga po Tipu</h2>
             <hr>
-        <form action="PretragaPoHotelu.jsp" method="post"> 
-        <p>Izaberi hotel:</p>
+        <form action="PretragaPoTipu.jsp" method="post"> 
+        <p>Izaberi Tip Sobe:</p>
         
         
         <select class="select" name="pretragahotel[]" onchange="this.form.submit();">
-            <option value="0">Izaberi Hotel</option>
+            <option value="0">Izaberi Tip Sobe</option>
             
             <%
                 try
@@ -83,11 +83,11 @@
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/businesshotel","root","");
                     Statement stm=conn.createStatement();
-                    ResultSet rs=stm.executeQuery("Select distinct id,naziv from hoteli");
+                    ResultSet rs=stm.executeQuery("Select distinct id,kreveti from tipsobe");
                     while(rs.next())
                     {
                         %>
-                        <option value="<%=rs.getString("id")%>"><%=rs.getString("naziv")%></option>
+                        <option value="<%=rs.getString("id")%>"><%=rs.getString("kreveti")%></option>
                         <%
                     }
                     conn.close();
@@ -110,22 +110,24 @@
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/businesshotel","root","");
                     Statement stmt=con.createStatement();
-                    ResultSet res=stmt.executeQuery("Select naziv,opis,adresa,telefon from hoteli where id="+request.getParameter("pretragahotel[]"));
+                    ResultSet res=stmt.executeQuery("Select h.naziv,ts.kreveti,ts.brojslobodnih,ts.opis,ts.cena from tipsobe as ts join hoteli as h on ts.hotel_id=h.id where ts.id="+request.getParameter("pretragahotel[]"));
                     while(res.next())
                     {
                       %>
                       <table class="tabelaizmena">
                       <tr>
                             <th>Naziv</th>
+                            <th>Tip Sobe</th>
+                            <th>Slobodnih soba</th>
                             <th>Opis</th>
-                            <th>Adresa</th>
-                            <th>Telefon</th>
+                            <th>Cena</th>
                      </tr>
                       <tr>
-                          <td><%=res.getString("naziv")%></td>
-                          <td><%=res.getString("opis")%></td>
-                          <td><%=res.getString("adresa")%></td>
-                          <td><%=res.getString("telefon")%></td>
+                          <td><%=res.getString("h.naziv")%></td>
+                          <td><%=res.getString("ts.kreveti")%></td>
+                          <td><%=res.getString("ts.brojslobodnih")%></td>
+                          <td><%=res.getString("ts.opis")%></td>
+                          <td><%=res.getString("ts.cena")%></td>
                       </tr>
                       <%
                     }

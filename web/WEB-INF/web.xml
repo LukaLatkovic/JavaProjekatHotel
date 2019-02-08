@@ -28,6 +28,14 @@
         <servlet-name>ListaTipova</servlet-name>
         <servlet-class>Servleti.ListaTipova</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BrisanjeKorisnika</servlet-name>
+        <servlet-class>Servleti.BrisanjeKorisnika</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IzmenaKorisnika</servlet-name>
+        <servlet-class>Servleti.IzmenaKorisnika</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistracijaServlet</servlet-name>
         <url-pattern>/RegistracijaServlet</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>ListaTipova</servlet-name>
         <url-pattern>/ListaTipova</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrisanjeKorisnika</servlet-name>
+        <url-pattern>/BrisanjeKorisnika</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IzmenaKorisnika</servlet-name>
+        <url-pattern>/IzmenaKorisnika</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
